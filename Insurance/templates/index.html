@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insurance Terms & Conditions Analyzer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Insurance Terms & Conditions Analyzer</h1>
+    <p class="subtitle">Upload your insurance document and let us analyze it for key terms and clarity.</p>
+
+    <form method="post" enctype="multipart/form-data" class="upload-form">
+      <label for="file-input" class="file-label">Choose a file</label>
+      <input type="file" name="file" id="file-input" accept=".txt, .pdf, .docx">
+      <textarea name ="prompt" placeholder="Enter your prompt"></textarea>
+      <button id="upload-btn" type="submit">Upload & Analyze</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
+</body>
+</html>
